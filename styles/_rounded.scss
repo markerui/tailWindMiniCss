@@ -1,0 +1,94 @@
+@each $i in $sizes{
+	.rounded-#{$i}{
+		border-radius: $i+rpx;
+	}
+	.rounded-l-#{$i}{
+		border-radius: $i+rpx 0 0 $i+rpx;
+	}
+	.rounded-r-#{$i}{
+		border-radius: 0 $i+rpx $i+rpx 0;
+	}
+	.rounded-t-#{$i}{
+		border-radius: $i+rpx $i+rpx 0 0;
+	}
+	.rounded-b-#{$i}{
+		border-radius: 0 0 $i+rpx $i+rpx;
+	}
+	.rounded-t-l-#{$i}{
+		border-radius: $i+rpx 0 0 0;
+	}
+	.rounded-t-r-#{$i}{
+		border-radius: 0 $i+rpx 0 0;
+	}
+	.rounded-b-l-#{$i}{
+		border-radius: 0 0 0 $i+rpx;
+	}
+	.rounded-b-r-#{$i}{
+		border-radius: 0 0 $i+rpx 0;
+	}
+}
+
+@each $name, $i in $sizes-map{
+	@if $name == default {
+		.rounded{
+			border-radius: $roundedDefault + rpx;
+		}
+		.rounded-l{
+			border-radius: $roundedDefault+rpx 0 0 $roundedDefault+rpx;
+		}
+		.rounded-r{
+			border-radius: 0 $roundedDefault+rpx $roundedDefault+rpx 0;
+		}
+		.rounded-t{
+			border-radius: $roundedDefault+rpx $roundedDefault+rpx 0 0;
+		}
+		.rounded-b{
+			border-radius: 0 0 $roundedDefault+rpx $roundedDefault+rpx;
+		}
+		.rounded-t-l{
+			border-radius: $roundedDefault+rpx 0 0 0;
+		}
+		.rounded-t-r{
+			border-radius: 0 $roundedDefault+rpx 0 0;
+		}
+		.rounded-b-l{
+			border-radius: 0 0 0 $roundedDefault+rpx;
+		}
+		.rounded-b-r{
+			border-radius: 0 0 $roundedDefault+rpx 0;
+		}
+	} @else {
+		.rounded-#{$name}{
+			border-radius: $i+rpx;
+		}
+		.rounded-l-#{$name}{
+			border-radius: $i+rpx 0 0 $i+rpx;
+		}
+		.rounded-r-#{$name}{
+			border-radius: 0 $i+rpx $i+rpx 0;
+		}
+		.rounded-t-#{$name}{
+			border-radius: $i+rpx $i+rpx 0 0;
+		}
+		.rounded-b-#{$name}{
+			border-radius: 0 0 $i+rpx $i+rpx;
+		}
+		.rounded-t-l-#{$name}{
+			border-radius: $i+rpx 0 0 0;
+		}
+		.rounded-t-r-#{$name}{
+			border-radius: 0 $i+rpx 0 0;
+		}
+		.rounded-b-l-#{$name}{
+			border-radius: 0 0 0 $i+rpx;
+		}
+		.rounded-b-r-#{$name}{
+			border-radius: 0 0 $i+rpx 0;
+		}
+	}
+}
+
+
+.rounded-full{
+	border-radius: 100%;
+}

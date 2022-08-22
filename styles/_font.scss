@@ -7,8 +7,10 @@
 }
 
 @each $name, $i in $sizes-map{
-	.text-#{$name}{
-		font-size: $i +rpx;
+	@if $name != default {
+		.text-#{$name}{
+			font-size: $i +rpx;
+		}
 	}
 }
 

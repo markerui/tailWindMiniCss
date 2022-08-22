@@ -1,0 +1,106 @@
+@each $i in $sizes{
+	.space-#{$i}{
+		padding: $i + rpx;
+	}
+	.space-x-#{$i}{
+		padding-left: $i + rpx;
+		padding-right: $i + rpx;
+	}
+	.space-y-#{$i}{
+		padding-top: $i + rpx;
+		padding-bottom: $i + rpx;
+	}
+	.space-l-#{$i}{
+		@if $i == 0 {
+			padding-left: $i + rpx !important;
+		} @else{
+			padding-left: $i + rpx;
+		}
+	}
+	.space-r-#{$i}{
+		@if $i == 0 {
+			padding-right: $i + rpx !important;
+		} @else{
+			padding-right: $i + rpx;
+		}
+	}
+	.space-t-#{$i}{
+		@if $i == 0 {
+			padding-top: $i + rpx !important;
+		} @else{
+			padding-top: $i + rpx;
+		}
+	}
+	.space-b-#{$i}{
+		@if $i == 0 {
+			padding-bottom: $i + rpx !important;
+		} @else{
+			padding-bottom: $i + rpx;
+		}
+	}
+}
+
+@each $name, $i in $sizes-map{
+	@if $name == default {
+		.space{
+			padding: $i+rpx;
+		}
+		.space-x{
+			padding-left: $i+rpx;
+			padding-right: $i+rpx;
+		}
+		.space-y{
+			padding-top: $i+rpx;
+			padding-bottom: $i+rpx;
+		}
+		.space-t{
+			padding-top: $i+rpx;
+		}
+		.space-b{
+			padding-bottom: $i+rpx;
+		}
+		.space-l{
+			padding-left: $i+rpx;
+		}
+		.space-r{
+			padding-right: $i+rpx;
+		}
+	} @else {
+		.space-x-#{$name}{
+			padding-left: $i + rpx;
+			padding-right: $i + rpx;
+		}
+		.space-y-#{$name}{
+			padding-top: $i + rpx;
+			padding-bottom: $i + rpx;
+		}
+		.space-l-#{$name}{
+			@if $i == 0 {
+				padding-left: $i + rpx !important;
+			} @else{
+				padding-left: $i + rpx;
+			}
+		}
+		.space-r-#{$name}{
+			@if $i == 0 {
+				padding-right: $i + rpx !important;
+			} @else{
+				padding-right: $i + rpx;
+			}
+		}
+		.space-t-#{$name}{
+			@if $i == 0 {
+				padding-top: $i + rpx !important;
+			} @else{
+				padding-top: $i + rpx;
+			}
+		}
+		.space-b-#{$name}{
+			@if $i == 0 {
+				padding-bottom: $i + rpx !important;
+			} @else{
+				padding-bottom: $i + rpx;
+			}
+		}
+	}
+}

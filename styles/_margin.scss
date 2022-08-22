@@ -1,0 +1,104 @@
+@each $i in $sizes{
+	.m-#{$i}{
+		margin: $i + rpx;
+	}
+	.m-x-#{$i}{
+		margin-left: $i + rpx;
+		margin-right: $i + rpx;
+	}
+	.m-y-#{$i}{
+		margin-top: $i + rpx;
+		margin-bottom: $i + rpx;
+	}
+	.m-l-#{$i}{
+		@if $i == 0 {
+			margin-left: $i + rpx !important;
+		} @else{
+			margin-left: $i + rpx;
+		}
+	}
+	.m-r-#{$i}{
+		@if $i == 0 {
+			margin-right: $i + rpx !important;
+		} @else{
+			margin-right: $i + rpx;
+		}
+	}
+	.m-t-#{$i}{
+		@if $i == 0 {
+			margin-top: $i + rpx !important;
+		} @else{
+			margin-top: $i + rpx;
+		}
+	}
+	.m-b-#{$i}{
+		@if $i == 0 {
+			margin-bottom: $i + rpx !important;
+		} @else{
+			margin-bottom: $i + rpx;
+		}
+	}
+}
+
+
+@each $name, $i in $sizes-map{
+	@if $name == default {
+		.m-x{
+			margin-left: $i + rpx;
+			margin-right: $i + rpx;
+		}
+		.m-y{
+			margin-top: $i + rpx;
+			margin-bottom: $i + rpx;
+		}
+		.m-t{
+			margin-top: $i + rpx;
+		}
+		.m-b{
+			margin-bottom: $i + rpx;
+		}
+		.m-l{
+			margin-left: $i + rpx;
+		}
+		.m-r{
+			margin-right: $i + rpx;
+		}
+	} @else {
+		.m-x-#{$name}{
+			margin-left: $i + rpx;
+			margin-right: $i + rpx;
+		}
+		.m-y-#{$name}{
+			margin-top: $i + rpx;
+			margin-bottom: $i + rpx;
+		}
+		.m-l-#{$name}{
+			@if $i == 0 {
+				margin-left: $i + rpx !important;
+			} @else{
+				margin-left: $i + rpx;
+			}
+		}
+		.m-r-#{$name}{
+			@if $i == 0 {
+				margin-right: $i + rpx !important;
+			} @else{
+				margin-right: $i + rpx;
+			}
+		}
+		.m-t-#{$name}{
+			@if $i == 0 {
+				margin-top: $i + rpx !important;
+			} @else{
+				margin-top: $i + rpx;
+			}
+		}
+		.m-b-#{$name}{
+			@if $i == 0 {
+				margin-bottom: $i + rpx !important;
+			} @else{
+				margin-bottom: $i + rpx;
+			}
+		}
+	}
+}
