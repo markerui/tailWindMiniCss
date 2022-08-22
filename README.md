@@ -1,4 +1,4 @@
-# Tailwindcss Mini For UniApp
+# Tailwindcss Mini For UniApp\Mini Program
 
 ## Variable (_variable.scss)
 ```scss
