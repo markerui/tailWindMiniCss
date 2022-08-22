@@ -54,6 +54,11 @@ $opacity: 0,
 100;
 ```
 
+## Style(css) Import
+
+```css
+<link rel="stylesheet" href="path/index.css" />
+```
 ## Style(Scss) Import
 
 ```css
