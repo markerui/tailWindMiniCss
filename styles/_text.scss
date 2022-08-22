@@ -1,7 +1,7 @@
 @each $name,
-$i in $colors {
+$value in $colors {
 	.text-#{$name} {
-		color: $i;
+		color: $value;
 	}
 }
 

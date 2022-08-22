@@ -1,16 +1,16 @@
-@each $i in $sizes {
-	@if $i>0 {
-		.text-#{$i} {
-			font-size: $i + $unit;
+@each $value in $sizes {
+	@if $value>0 {
+		.text-#{$value} {
+			font-size: $value + $unit;
 		}
 	}
 }
 
 @each $name,
-$i in $sizes-map {
+$value in $sizes-map {
 	@if $name !=default {
 		.text-#{$name} {
-			font-size: $i + $unit;
+			font-size: $value + $unit;
 		}
 	}
 }

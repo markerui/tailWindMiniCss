@@ -1,95 +1,78 @@
-@each $i in $sizes {
-	.m-#{$i} {
-		margin: $i + $unit;
-	}
-
-	.m-x-#{$i} {
-		margin-left: $i + $unit;
-		margin-right: $i + $unit;
-	}
-
-	.m-y-#{$i} {
-		margin-top: $i + $unit;
-		margin-bottom: $i + $unit;
-	}
-
-	.m-l-#{$i} {
-		margin-left: $i + $unit;
-	}
-
-	.m-r-#{$i} {
-		margin-right: $i + $unit;
-	}
-
-	.m-t-#{$i} {
-		margin-top: $i + $unit;
-	}
-
-	.m-b-#{$i} {
-		margin-bottom: $i + $unit;
-	}
-}
-
-
-@each $name,
-$i in $sizes-map {
+@mixin margin-variant($name, $value) {
 	@if $name==default {
 		.m-x {
-			margin-left: $i + $unit;
-			margin-right: $i + $unit;
+			margin-left: $value + $unit;
+			margin-right: $value + $unit;
 		}
 
 		.m-y {
-			margin-top: $i + $unit;
-			margin-bottom: $i + $unit;
+			margin-top: $value + $unit;
+			margin-bottom: $value + $unit;
 		}
 
 		.m-t {
-			margin-top: $i + $unit;
+			margin-top: $value + $unit;
 		}
 
 		.m-b {
-			margin-bottom: $i + $unit;
+			margin-bottom: $value + $unit;
 		}
 
 		.m-l {
-			margin-left: $i + $unit;
+			margin-left: $value + $unit;
 		}
 
 		.m-r {
-			margin-right: $i + $unit;
+			margin-right: $value + $unit;
 		}
 	}
 
 	@else {
 		.m-#{$name} {
-			margin: $i + $unit;
+			margin: $value + $unit;
 		}
 
 		.m-x-#{$name} {
-			margin-left: $i + $unit;
-			margin-right: $i + $unit;
+			margin-left: $value + $unit;
+			margin-right: $value + $unit;
 		}
 
 		.m-y-#{$name} {
-			margin-top: $i + $unit;
-			margin-bottom: $i + $unit;
+			margin-top: $value + $unit;
+			margin-bottom: $value + $unit;
 		}
 
 		.m-l-#{$name} {
-			margin-left: $i + $unit;
+			margin-left: $value + $unit;
 		}
 
 		.m-r-#{$name} {
-			margin-right: $i + $unit;
+			margin-right: $value + $unit;
 		}
 
 		.m-t-#{$name} {
-			margin-top: $i + $unit;
+			margin-top: $value + $unit;
 		}
 
 		.m-b-#{$name} {
-			margin-bottom: $i + $unit;
+			margin-bottom: $value + $unit;
 		}
+	}
+
+}
+
+@each $value in $sizes {
+	@include margin-variant($value, $value);
+}
+
+
+@each $name,
+$value in $sizes-map {
+	@if $name==default {
+		@include margin-variant($name, $value);
+	}
+
+	@else {
+		@include margin-variant($name, $value);
 	}
 }

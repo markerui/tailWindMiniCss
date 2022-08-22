@@ -1,6 +1,6 @@
 @each $name,
-$i in $colors {
+$value in $colors {
 	.bg-#{$name} {
-		background-color: $i;
+		background-color: $value;
 	}
 }

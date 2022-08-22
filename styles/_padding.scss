@@ -1,94 +1,71 @@
-@each $i in $sizes {
-	.p-#{$i} {
-		padding: $i + $unit;
-	}
-
-	.p-x-#{$i} {
-		padding-left: $i + $unit;
-		padding-right: $i + $unit;
-	}
-
-	.p-y-#{$i} {
-		padding-top: $i + $unit;
-		padding-bottom: $i + $unit;
-	}
-
-	.p-l-#{$i} {
-		padding-left: $i + $unit;
-	}
-
-	.p-r-#{$i} {
-		padding-right: $i + $unit;
-	}
-
-	.p-t-#{$i} {
-		padding-top: $i + $unit;
-	}
-
-	.p-b-#{$i} {
-		padding-bottom: $i + $unit;
-	}
-}
-
-@each $name,
-$i in $sizes-map {
+@mixin padding-variant($name, $value) {
 	@if $name==default {
 		.p-x {
-			padding-left: $i + $unit;
-			padding-right: $i + $unit;
+			padding-left: $value + $unit;
+			padding-right: $value + $unit;
 		}
 
 		.p-y {
-			padding-top: $i + $unit;
-			padding-bottom: $i + $unit;
+			padding-top: $value + $unit;
+			padding-bottom: $value + $unit;
 		}
 
 		.p-t {
-			padding-top: $i + $unit;
+			padding-top: $value + $unit;
 		}
 
 		.p-b {
-			padding-bottom: $i + $unit;
+			padding-bottom: $value + $unit;
 		}
 
 		.p-l {
-			padding-left: $i + $unit;
+			padding-left: $value + $unit;
 		}
 
 		.p-r {
-			padding-right: $i + $unit;
+			padding-right: $value + $unit;
 		}
 	}
 
 	@else {
 		.p-#{$name} {
-			padding: $i + $unit;
+			padding: $value + $unit;
 		}
 
 		.p-x-#{$name} {
-			padding-left: $i + $unit;
-			padding-right: $i + $unit;
+			padding-left: $value + $unit;
+			padding-right: $value + $unit;
 		}
 
 		.p-y-#{$name} {
-			padding-top: $i + $unit;
-			padding-bottom: $i + $unit;
+			padding-top: $value + $unit;
+			padding-bottom: $value + $unit;
 		}
 
 		.p-l-#{$name} {
-			padding-left: $i + $unit;
+			padding-left: $value + $unit;
 		}
 
 		.p-r-#{$name} {
-			padding-right: $i + $unit;
+			padding-right: $value + $unit;
 		}
 
 		.p-t-#{$name} {
-			padding-top: $i + $unit;
+			padding-top: $value + $unit;
 		}
 
 		.p-b-#{$name} {
-			padding-bottom: $i + $unit;
+			padding-bottom: $value + $unit;
 		}
 	}
+
+}
+
+@each $value in $sizes {
+	@include padding-variant($value, $value);
+}
+
+@each $name,
+$value in $sizes-map {
+	@include padding-variant($name, $value);
 }

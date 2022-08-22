@@ -1,5 +1,5 @@
-@each $i in $opacity {
-	.opacity-#{$i} {
-		opacity: $i / 100;
+@each $value in $opacity {
+	.opacity-#{$value} {
+		opacity: $value / 100;
 	}
 }

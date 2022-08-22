@@ -1,98 +1,75 @@
-@each $i in $sizes {
-	.space-#{$i} {
-		padding: $i + $unit;
-	}
-
-	.space-x-#{$i} {
-		padding-left: $i + $unit;
-		padding-right: $i + $unit;
-	}
-
-	.space-y-#{$i} {
-		padding-top: $i + $unit;
-		padding-bottom: $i + $unit;
-	}
-
-	.space-l-#{$i} {
-		padding-left: $i + $unit;
-	}
-
-	.space-r-#{$i} {
-		padding-right: $i + $unit;
-	}
-
-	.space-t-#{$i} {
-		padding-top: $i + $unit;
-	}
-
-	.space-b-#{$i} {
-		padding-bottom: $i + $unit;
-	}
-}
-
-@each $name,
-$i in $sizes-map {
+@mixin space-variant($name, $value) {
 	@if $name==default {
 		.space {
-			padding: $i + $unit;
+			padding: $value + $unit;
 		}
 
 		.space-x {
-			padding-left: $i + $unit;
-			padding-right: $i + $unit;
+			padding-left: $value + $unit;
+			padding-right: $value + $unit;
 		}
 
 		.space-y {
-			padding-top: $i + $unit;
-			padding-bottom: $i + $unit;
+			padding-top: $value + $unit;
+			padding-bottom: $value + $unit;
 		}
 
 		.space-t {
-			padding-top: $i + $unit;
+			padding-top: $value + $unit;
 		}
 
 		.space-b {
-			padding-bottom: $i + $unit;
+			padding-bottom: $value + $unit;
 		}
 
 		.space-l {
-			padding-left: $i + $unit;
+			padding-left: $value + $unit;
 		}
 
 		.space-r {
-			padding-right: $i + $unit;
+			padding-right: $value + $unit;
 		}
 	}
 
 	@else {
 		.space-#{$name} {
-			padding: $i + $unit;
+			padding: $value + $unit;
 		}
 
 		.space-x-#{$name} {
-			padding-left: $i + $unit;
-			padding-right: $i + $unit;
+			padding-left: $value + $unit;
+			padding-right: $value + $unit;
 		}
 
 		.space-y-#{$name} {
-			padding-top: $i + $unit;
-			padding-bottom: $i + $unit;
+			padding-top: $value + $unit;
+			padding-bottom: $value + $unit;
 		}
 
 		.space-l-#{$name} {
-			padding-left: $i + $unit;
+			padding-left: $value + $unit;
 		}
 
 		.space-r-#{$name} {
-			padding-right: $i + $unit;
+			padding-right: $value + $unit;
 		}
 
 		.space-t-#{$name} {
-			padding-top: $i + $unit;
+			padding-top: $value + $unit;
 		}
 
 		.space-b-#{$name} {
-			padding-bottom: $i + $unit;
+			padding-bottom: $value + $unit;
 		}
 	}
+
+}
+
+@each $value in $sizes {
+	@include space-variant($value, $value);
+}
+
+@each $name,
+$value in $sizes-map {
+	@include space-variant($name, $value);
 }

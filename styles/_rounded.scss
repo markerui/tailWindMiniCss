@@ -1,43 +1,4 @@
-@each $i in $sizes {
-	.rounded-#{$i} {
-		border-radius: $i + $unit;
-	}
-
-	.rounded-l-#{$i} {
-		border-radius: $i + $unit 0 0 $i + $unit;
-	}
-
-	.rounded-r-#{$i} {
-		border-radius: 0 $i + $unit $i + $unit 0;
-	}
-
-	.rounded-t-#{$i} {
-		border-radius: $i + $unit $i + $unit 0 0;
-	}
-
-	.rounded-b-#{$i} {
-		border-radius: 0 0 $i + $unit $i + $unit;
-	}
-
-	.rounded-t-l-#{$i} {
-		border-radius: $i + $unit 0 0 0;
-	}
-
-	.rounded-t-r-#{$i} {
-		border-radius: 0 $i + $unit 0 0;
-	}
-
-	.rounded-b-l-#{$i} {
-		border-radius: 0 0 0 $i + $unit;
-	}
-
-	.rounded-b-r-#{$i} {
-		border-radius: 0 0 $i + $unit 0;
-	}
-}
-
-@each $name,
-$i in $sizes-map {
+@mixin rounded-variant($name, $value) {
 	@if $name==default {
 		.rounded {
 			border-radius: $roundedDefault + $unit;
@@ -78,41 +39,51 @@ $i in $sizes-map {
 
 	@else {
 		.rounded-#{$name} {
-			border-radius: $i + $unit;
+			border-radius: $value + $unit;
 		}
 
 		.rounded-l-#{$name} {
-			border-radius: $i + $unit 0 0 $i + $unit;
+			border-radius: $value + $unit 0 0 $value + $unit;
 		}
 
 		.rounded-r-#{$name} {
-			border-radius: 0 $i + $unit $i + $unit 0;
+			border-radius: 0 $value + $unit $value + $unit 0;
 		}
 
 		.rounded-t-#{$name} {
-			border-radius: $i + $unit $i + $unit 0 0;
+			border-radius: $value + $unit $value + $unit 0 0;
 		}
 
 		.rounded-b-#{$name} {
-			border-radius: 0 0 $i + $unit $i + $unit;
+			border-radius: 0 0 $value + $unit $value + $unit;
 		}
 
 		.rounded-t-l-#{$name} {
-			border-radius: $i + $unit 0 0 0;
+			border-radius: $value + $unit 0 0 0;
 		}
 
 		.rounded-t-r-#{$name} {
-			border-radius: 0 $i + $unit 0 0;
+			border-radius: 0 $value + $unit 0 0;
 		}
 
 		.rounded-b-l-#{$name} {
-			border-radius: 0 0 0 $i + $unit;
+			border-radius: 0 0 0 $value + $unit;
 		}
 
 		.rounded-b-r-#{$name} {
-			border-radius: 0 0 $i + $unit 0;
+			border-radius: 0 0 $value + $unit 0;
 		}
 	}
+
+}
+
+@each $value in $sizes {
+	@include rounded-variant($value, $value);
+}
+
+@each $name,
+$value in $sizes-map {
+	@include rounded-variant($name, $value);
 }
 
 

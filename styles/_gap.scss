@@ -1,12 +1,4 @@
-@each $i in $sizes {
-	.gap-#{$i} {
-		grid-gap: $i + $unit;
-		gap: $i + $unit;
-	}
-}
-
-@each $name,
-$value in $sizes-map {
+@mixin gap-variant($name, $value) {
 	@if $name==default {
 		.gap {
 			grid-gap: $value + $unit;
@@ -15,9 +7,19 @@ $value in $sizes-map {
 	}
 
 	@else {
-		.gap-#{$name} {
+		.gap-#{$value} {
 			grid-gap: $value + $unit;
 			gap: $value + $unit;
 		}
 	}
+
+}
+
+@each $value in $sizes {
+	@include gap-variant($value, $value);
+}
+
+@each $name,
+$value in $sizes-map {
+	@include gap-variant($name, $value);
 }

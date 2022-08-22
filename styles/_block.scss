@@ -81,8 +81,8 @@
 }
 
 // offset
-@for $i from 1 through 5 {
-	.z-#{$i} {
-		z-index: $i;
+@for $value from 1 through 5 {
+	.z-#{$value} {
+		z-index: $value;
 	}
 }

@@ -1,22 +1,22 @@
 @each $name,
-$i in $colors {
+$value in $colors {
 	.border-#{$name} {
-		border: $i 1 + $unit solid;
+		border: $value 1 + $unit solid;
 	}
 
 	.border-t-#{$name} {
-		border-top: $i 1 + $unit solid;
+		border-top: $value 1 + $unit solid;
 	}
 
 	.border-b-#{$name} {
-		border-bottom: $i 1 + $unit solid;
+		border-bottom: $value 1 + $unit solid;
 	}
 
 	.border-l-#{$name} {
-		border-left: $i 1 + $unit solid;
+		border-left: $value 1 + $unit solid;
 	}
 
 	.border-r-#{$name} {
-		border-right: $i 1 + $unit solid;
+		border-right: $value 1 + $unit solid;
 	}
 }

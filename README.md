@@ -8,7 +8,7 @@ $black: #000;
 $white: #fff;
 $primary: #007bff;
 $success: #28a745;
-$info: #17a2b8;
+$valuenfo: #17a2b8;
 $warning: #ffc107;
 $error: #dc3545;
 
@@ -16,7 +16,7 @@ $colors: (black: $black,
 	white: $white,
 	primary: $primary,
 	success: $success,
-	info: $info,
+	info: $valuenfo,
 	warning: $warning,
 	error: $error);
 
@@ -73,7 +73,7 @@ output {
     white: $white;
     primary: $primary;
     success: $success;
-    info: $info;
+    info: $valuenfo;
     warning: $warning;
     error: $error;
 }

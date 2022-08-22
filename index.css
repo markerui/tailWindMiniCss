@@ -609,37 +609,37 @@
   gap: 40rpx;
 }
 
-.gap-xs {
+.gap-12 {
   grid-gap: 12rpx;
   gap: 12rpx;
 }
 
-.gap-sm {
+.gap-14 {
   grid-gap: 14rpx;
   gap: 14rpx;
 }
 
-.gap-base {
+.gap-16 {
   grid-gap: 16rpx;
   gap: 16rpx;
 }
 
-.gap-lg {
+.gap-18 {
   grid-gap: 18rpx;
   gap: 18rpx;
 }
 
-.gap-xl {
+.gap-20 {
   grid-gap: 20rpx;
   gap: 20rpx;
 }
 
-.gap-2xl {
+.gap-24 {
   grid-gap: 24rpx;
   gap: 24rpx;
 }
 
-.gap-3xl {
+.gap-28 {
   grid-gap: 28rpx;
   gap: 28rpx;
 }
@@ -649,7 +649,7 @@
   gap: 30rpx;
 }
 
-.gap-4xl {
+.gap-32 {
   grid-gap: 32rpx;
   gap: 32rpx;
 }
