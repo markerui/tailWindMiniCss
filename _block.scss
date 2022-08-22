@@ -1,0 +1,72 @@
+.box-border{
+	box-sizing: border-box;
+}
+.box-content{
+	box-sizing: content-box;
+}
+// box
+
+.block{
+	display: block;
+}
+.hidden{
+	display: none;
+}
+// display
+
+.static{
+	position: static;
+}
+.fixed{
+	position: fixed;
+}
+.absolute{
+	position: absolute;
+}
+.relative{
+	position: relative;
+}
+.sticky{
+	position: sticky;
+}
+// position
+
+.inset{
+	inset: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.top-0{
+	top: 0;
+}
+.top-full{
+	top: 100%;
+}
+.bottom-0{
+	bottom: 0;
+}
+.bottom-full{
+	bottom: 100%;
+}
+.left-0{
+	left: 0;
+}
+.left-full{
+	left: 100%;
+}
+.right-0{
+	right: 0;
+}
+.right-full{
+	right: 100%;
+}
+// offset
+@for $i from 1 through 5 {
+  .z-#{$i} { 
+	  z-index: $i;
+  }
+}
+
+

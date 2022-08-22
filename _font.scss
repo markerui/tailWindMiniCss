@@ -1,0 +1,23 @@
+@each $i in $sizes{
+	@if $i > 0{
+		.text-#{$i}{
+			font-size: $i +rpx;
+		}
+	}
+}
+
+@each $name, $i in $sizes-map{
+	.text-#{$name}{
+		font-size: $i +rpx;
+	}
+}
+
+.font-bold{
+	font-weight: bold;
+}
+.font-normal{
+	font-weight: normal;
+}
+.font-italic{
+	font-style: italic;
+}

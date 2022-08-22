@@ -1,0 +1,20 @@
+@import "variable.scss";
+@import "flex.scss";
+@import "block.scss";
+@import "background.scss";
+@import "border.scss";
+@import "font.scss";
+@import "gap.scss";
+@import "rounded.scss";
+@import "space.scss";
+@import "text.scss";
+@import "opacity.scss";
+@import "padding.scss";
+@import "margin.scss";
+@import "size.scss";
+
+.truncate{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

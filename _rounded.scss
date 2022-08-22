@@ -1,0 +1,60 @@
+@each $i in $sizes{
+	.rounded{
+		border-radius: $i+rpx;
+	}
+	.rounded-l{
+		border-radius: $i+rpx 0 0 $i+rpx;
+	}
+	.rounded-r{
+		border-radius: 0 $i+rpx $i+rpx 0;
+	}
+	.rounded-t{
+		border-radius: $i+rpx $i+rpx 0 0;
+	}
+	.rounded-b{
+		border-radius: 0 0 $i+rpx $i+rpx;
+	}
+	.rounded-t-l{
+		border-radius: $i+rpx 0 0 0;
+	}
+	.rounded-t-r{
+		border-radius: 0 $i+rpx 0 0;
+	}
+	.rounded-b-l{
+		border-radius: 0 0 0 $i+rpx;
+	}
+	.rounded-b-r{
+		border-radius: 0 0 $i+rpx 0;
+	}
+}
+
+@each $name, $i in $sizes-map{
+	.rounded-#{$name}{
+		border-radius: $i+rpx;
+	}
+	.rounded-l-#{$name}{
+		border-radius: $i+rpx 0 0 $i+rpx;
+	}
+	.rounded-r-#{$name}{
+		border-radius: 0 $i+rpx $i+rpx 0;
+	}
+	.rounded-t-#{$name}{
+		border-radius: $i+rpx $i+rpx 0 0;
+	}
+	.rounded-b-#{$name}{
+		border-radius: 0 0 $i+rpx $i+rpx;
+	}
+	.rounded-t-l-#{$name}{
+		border-radius: $i+rpx 0 0 0;
+	}
+	.rounded-t-r-#{$name}{
+		border-radius: 0 $i+rpx 0 0;
+	}
+	.rounded-b-l-#{$name}{
+		border-radius: 0 0 0 $i+rpx;
+	}
+	.rounded-b-r-#{$name}{
+		border-radius: 0 0 $i+rpx 0;
+	}
+}
+

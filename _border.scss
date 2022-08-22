@@ -1,0 +1,17 @@
+@each $name, $i in $colors{
+	.border-#{$name}{
+		border: $i 1rpx solid;
+	}
+	.border-t-#{$name}{
+		border-top: $i 1rpx solid;
+	}
+	.border-b-#{$name}{
+		border-bottom: $i 1rpx solid;
+	}
+	.border-l-#{$name}{
+		border-left: $i 1rpx solid;
+	}
+	.border-r-#{$name}{
+		border-right: $i 1rpx solid;
+	}
+}

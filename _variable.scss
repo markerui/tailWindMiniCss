@@ -1,0 +1,48 @@
+$black: #000;
+$wihte: #fff;
+$primary: #007bff;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #ffc107;
+$error: #dc3545;
+
+$colors: (
+	black: $black,
+	wihte: $wihte,
+	primary: $primary,
+	success: $success,
+	info: $info,
+	warning: $warning,
+	error: $error
+);
+
+$sizes: 0, 8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 32, 36, 40;
+
+$sizes-map: (
+	xs: 12,
+	sm: 14,
+	base: 16,
+	lg: 18,
+	xl: 20,
+	2xl: 24,
+	3xl: 28,
+	4xl: 32,
+	full: 100%
+);
+
+$opacitys: (
+   0: 0,
+   25: 0.25,
+   50: 0.5,
+   75: 0.75,
+   100: 1
+);
+
+
+
+
+
+
+
+
+

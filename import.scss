@@ -1,0 +1,10 @@
+@import "variable.scss";
+:export {
+	black: $black;
+	wihte: $wihte;
+	primary: $primary;
+	success: $success;
+	info: $info;
+	warning: $warning;
+	error: $error;
+}
