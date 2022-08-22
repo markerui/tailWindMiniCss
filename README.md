@@ -60,7 +60,7 @@ $opacity: 0,
 @import "path/index.scss";
 ```
 
-## Vue Import Scss Color Variable
+## JavaScript Import Scss Color Variable
 
 ```js
 
@@ -73,7 +73,7 @@ output {
     white: $white;
     primary: $primary;
     success: $success;
-    info: $valuenfo;
+    info: $info;
     warning: $warning;
     error: $error;
 }
