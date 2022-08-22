@@ -1,42 +1,26 @@
 @each $i in $sizes{
 	.m-#{$i}{
-		margin: $i + rpx;
+		margin: $i + $unit;
 	}
 	.m-x-#{$i}{
-		margin-left: $i + rpx;
-		margin-right: $i + rpx;
+		margin-left: $i + $unit;
+		margin-right: $i + $unit;
 	}
 	.m-y-#{$i}{
-		margin-top: $i + rpx;
-		margin-bottom: $i + rpx;
+		margin-top: $i + $unit;
+		margin-bottom: $i + $unit;
 	}
 	.m-l-#{$i}{
-		@if $i == 0 {
-			margin-left: $i + rpx !important;
-		} @else{
-			margin-left: $i + rpx;
-		}
+		margin-left: $i + $unit;
 	}
 	.m-r-#{$i}{
-		@if $i == 0 {
-			margin-right: $i + rpx !important;
-		} @else{
-			margin-right: $i + rpx;
-		}
+		margin-right: $i + $unit;
 	}
 	.m-t-#{$i}{
-		@if $i == 0 {
-			margin-top: $i + rpx !important;
-		} @else{
-			margin-top: $i + rpx;
-		}
+		margin-top: $i + $unit;
 	}
 	.m-b-#{$i}{
-		@if $i == 0 {
-			margin-bottom: $i + rpx !important;
-		} @else{
-			margin-bottom: $i + rpx;
-		}
+		margin-bottom: $i + $unit;
 	}
 }
 
@@ -44,61 +28,45 @@
 @each $name, $i in $sizes-map{
 	@if $name == default {
 		.m-x{
-			margin-left: $i + rpx;
-			margin-right: $i + rpx;
+			margin-left: $i +  $unit;
+			margin-right: $i +  $unit;
 		}
 		.m-y{
-			margin-top: $i + rpx;
-			margin-bottom: $i + rpx;
+			margin-top: $i +  $unit;
+			margin-bottom: $i +  $unit;
 		}
 		.m-t{
-			margin-top: $i + rpx;
+			margin-top: $i +  $unit;
 		}
 		.m-b{
-			margin-bottom: $i + rpx;
+			margin-bottom: $i +  $unit;
 		}
 		.m-l{
-			margin-left: $i + rpx;
+			margin-left: $i +  $unit;
 		}
 		.m-r{
-			margin-right: $i + rpx;
+			margin-right: $i +  $unit;
 		}
 	} @else {
 		.m-x-#{$name}{
-			margin-left: $i + rpx;
-			margin-right: $i + rpx;
+			margin-left: $i +  $unit;
+			margin-right: $i +  $unit;
 		}
 		.m-y-#{$name}{
-			margin-top: $i + rpx;
-			margin-bottom: $i + rpx;
+			margin-top: $i +  $unit;
+			margin-bottom: $i +  $unit;
 		}
 		.m-l-#{$name}{
-			@if $i == 0 {
-				margin-left: $i + rpx !important;
-			} @else{
-				margin-left: $i + rpx;
-			}
+			margin-left: $i +  $unit;
 		}
 		.m-r-#{$name}{
-			@if $i == 0 {
-				margin-right: $i + rpx !important;
-			} @else{
-				margin-right: $i + rpx;
-			}
+			margin-right: $i +  $unit;
 		}
 		.m-t-#{$name}{
-			@if $i == 0 {
-				margin-top: $i + rpx !important;
-			} @else{
-				margin-top: $i + rpx;
-			}
+			margin-top: $i +  $unit;
 		}
 		.m-b-#{$name}{
-			@if $i == 0 {
-				margin-bottom: $i + rpx !important;
-			} @else{
-				margin-bottom: $i + rpx;
-			}
+			margin-bottom: $i +  $unit;
 		}
 	}
 }

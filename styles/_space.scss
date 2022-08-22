@@ -1,106 +1,74 @@
 @each $i in $sizes{
 	.space-#{$i}{
-		padding: $i + rpx;
+		padding: $i + $unit;
 	}
 	.space-x-#{$i}{
-		padding-left: $i + rpx;
-		padding-right: $i + rpx;
+		padding-left: $i + $unit;
+		padding-right: $i + $unit;
 	}
 	.space-y-#{$i}{
-		padding-top: $i + rpx;
-		padding-bottom: $i + rpx;
+		padding-top: $i + $unit;
+		padding-bottom: $i + $unit;
 	}
 	.space-l-#{$i}{
-		@if $i == 0 {
-			padding-left: $i + rpx !important;
-		} @else{
-			padding-left: $i + rpx;
-		}
+		padding-left: $i + $unit;
 	}
 	.space-r-#{$i}{
-		@if $i == 0 {
-			padding-right: $i + rpx !important;
-		} @else{
-			padding-right: $i + rpx;
-		}
+		padding-right: $i + $unit;
 	}
 	.space-t-#{$i}{
-		@if $i == 0 {
-			padding-top: $i + rpx !important;
-		} @else{
-			padding-top: $i + rpx;
-		}
+		padding-top: $i + $unit;
 	}
 	.space-b-#{$i}{
-		@if $i == 0 {
-			padding-bottom: $i + rpx !important;
-		} @else{
-			padding-bottom: $i + rpx;
-		}
+		padding-bottom: $i + $unit;
 	}
 }
 
 @each $name, $i in $sizes-map{
 	@if $name == default {
 		.space{
-			padding: $i+rpx;
+			padding: $i + $unit;
 		}
 		.space-x{
-			padding-left: $i+rpx;
-			padding-right: $i+rpx;
+			padding-left: $i + $unit;
+			padding-right: $i + $unit;
 		}
 		.space-y{
-			padding-top: $i+rpx;
-			padding-bottom: $i+rpx;
+			padding-top: $i + $unit;
+			padding-bottom: $i + $unit;
 		}
 		.space-t{
-			padding-top: $i+rpx;
+			padding-top: $i + $unit;
 		}
 		.space-b{
-			padding-bottom: $i+rpx;
+			padding-bottom: $i + $unit;
 		}
 		.space-l{
-			padding-left: $i+rpx;
+			padding-left: $i + $unit;
 		}
 		.space-r{
-			padding-right: $i+rpx;
+			padding-right: $i + $unit;
 		}
 	} @else {
 		.space-x-#{$name}{
-			padding-left: $i + rpx;
-			padding-right: $i + rpx;
+			padding-left: $i + $unit;
+			padding-right: $i + $unit;
 		}
 		.space-y-#{$name}{
-			padding-top: $i + rpx;
-			padding-bottom: $i + rpx;
+			padding-top: $i + $unit;
+			padding-bottom: $i + $unit;
 		}
 		.space-l-#{$name}{
-			@if $i == 0 {
-				padding-left: $i + rpx !important;
-			} @else{
-				padding-left: $i + rpx;
-			}
+			padding-left: $i + $unit;
 		}
 		.space-r-#{$name}{
-			@if $i == 0 {
-				padding-right: $i + rpx !important;
-			} @else{
-				padding-right: $i + rpx;
-			}
+			padding-right: $i + $unit;
 		}
 		.space-t-#{$name}{
-			@if $i == 0 {
-				padding-top: $i + rpx !important;
-			} @else{
-				padding-top: $i + rpx;
-			}
+			padding-top: $i + $unit;
 		}
 		.space-b-#{$name}{
-			@if $i == 0 {
-				padding-bottom: $i + rpx !important;
-			} @else{
-				padding-bottom: $i + rpx;
-			}
+			padding-bottom: $i + $unit;
 		}
 	}
 }

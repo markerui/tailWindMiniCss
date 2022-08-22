@@ -1,7 +1,9 @@
-# Tailwindcss mini for UniApp (only)
+# Tailwindcss Mini For UniApp
 
-## Variable (_)
+## Variable (_variable.scss)
 ```scss
+$unit: rpx;  //unit default rpx
+
 $black: #000;
 $white: #fff;
 $primary: #007bff;
@@ -35,17 +37,16 @@ $sizes-map: (
 	4xl: 32
 );
 
-
 $opacity: 0, 25, 50, 75, 100;
 ```
 
-## Style import
+## Style(Scss) Import
 
 ```css
 @import "path/index.scss";
 ```
 
-## Vue import
+## Vue Import Scss Color Variable
 
 ```js
 
@@ -70,16 +71,11 @@ output #000(black)
 */
 ```
 
+## Build css
+[Link Build Css](./index.css)
 ## Readme More 
 
 - [Tailwindcss](https://tailwindcss.com/)
 - [UniApp](https://uniapp.dcloud.io/)
 
-
-
-## Build css
-```css
-
-
-```
 

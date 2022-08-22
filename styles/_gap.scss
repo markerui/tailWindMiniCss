@@ -1,20 +1,20 @@
 @each $i in $sizes{
 	.gap-#{$i}{
-		grid-gap: $i +rpx;
-		gap: $i +rpx;
+		grid-gap: $i + $unit;
+		gap: $i + $unit;
 	}
 }
 
 @each $name, $value in $sizes-map{
 	@if $name == default {
 		.gap{
-			grid-gap: $value +rpx;
-			gap: $value +rpx;
+			grid-gap: $value + $unit;
+			gap: $value + $unit;
 		}
 	} @else {
 		.gap-#{$name}{
-			grid-gap: $value +rpx;
-			gap: $value +rpx;
+			grid-gap: $value + $unit;
+			gap: $value + $unit;
 		}
 	}
 }

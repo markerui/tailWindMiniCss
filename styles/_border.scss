@@ -1,17 +1,17 @@
 @each $name, $i in $colors{
 	.border-#{$name}{
-		border: $i 1rpx solid;
+		border: $i 1 + $unit solid;
 	}
 	.border-t-#{$name}{
-		border-top: $i 1rpx solid;
+		border-top: $i 1 + $unit solid;
 	}
 	.border-b-#{$name}{
-		border-bottom: $i 1rpx solid;
+		border-bottom: $i 1 + $unit solid;
 	}
 	.border-l-#{$name}{
-		border-left: $i 1rpx solid;
+		border-left: $i 1 + $unit solid;
 	}
 	.border-r-#{$name}{
-		border-right: $i 1rpx solid;
+		border-right: $i 1 + $unit solid;
 	}
 }

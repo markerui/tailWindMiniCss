@@ -1,7 +1,7 @@
 @each $i in $sizes{
 	@if $i > 0{
 		.text-#{$i}{
-			font-size: $i +rpx;
+			font-size: $i + $unit;
 		}
 	}
 }
@@ -9,7 +9,7 @@
 @each $name, $i in $sizes-map{
 	@if $name != default {
 		.text-#{$name}{
-			font-size: $i +rpx;
+			font-size: $i + $unit;
 		}
 	}
 }
