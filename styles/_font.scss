@@ -1,25 +1,28 @@
-@each $i in $sizes{
-	@if $i > 0{
-		.text-#{$i}{
+@each $i in $sizes {
+	@if $i>0 {
+		.text-#{$i} {
 			font-size: $i + $unit;
 		}
 	}
 }
 
-@each $name, $i in $sizes-map{
-	@if $name != default {
-		.text-#{$name}{
+@each $name,
+$i in $sizes-map {
+	@if $name !=default {
+		.text-#{$name} {
 			font-size: $i + $unit;
 		}
 	}
 }
 
-.font-bold{
+.font-bold {
 	font-weight: bold;
 }
-.font-normal{
+
+.font-normal {
 	font-weight: normal;
 }
-.font-italic{
+
+.font-italic {
 	font-style: italic;
 }

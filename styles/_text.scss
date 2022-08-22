@@ -1,20 +1,18 @@
-@each $name, $i in $colors{
-	.text-#{$name}{
+@each $name,
+$i in $colors {
+	.text-#{$name} {
 		color: $i;
 	}
 }
 
-.text-left{
+.text-left {
 	text-align: left;
 }
-.text-center{
+
+.text-center {
 	text-align: center;
 }
-.text-right{
+
+.text-right {
 	text-align: right;
 }
-
-
-
-
-

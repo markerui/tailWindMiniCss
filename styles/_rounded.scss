@@ -1,94 +1,121 @@
-@each $i in $sizes{
-	.rounded-#{$i}{
+@each $i in $sizes {
+	.rounded-#{$i} {
 		border-radius: $i + $unit;
 	}
-	.rounded-l-#{$i}{
+
+	.rounded-l-#{$i} {
 		border-radius: $i + $unit 0 0 $i + $unit;
 	}
-	.rounded-r-#{$i}{
+
+	.rounded-r-#{$i} {
 		border-radius: 0 $i + $unit $i + $unit 0;
 	}
-	.rounded-t-#{$i}{
+
+	.rounded-t-#{$i} {
 		border-radius: $i + $unit $i + $unit 0 0;
 	}
-	.rounded-b-#{$i}{
+
+	.rounded-b-#{$i} {
 		border-radius: 0 0 $i + $unit $i + $unit;
 	}
-	.rounded-t-l-#{$i}{
+
+	.rounded-t-l-#{$i} {
 		border-radius: $i + $unit 0 0 0;
 	}
-	.rounded-t-r-#{$i}{
+
+	.rounded-t-r-#{$i} {
 		border-radius: 0 $i + $unit 0 0;
 	}
-	.rounded-b-l-#{$i}{
+
+	.rounded-b-l-#{$i} {
 		border-radius: 0 0 0 $i + $unit;
 	}
-	.rounded-b-r-#{$i}{
+
+	.rounded-b-r-#{$i} {
 		border-radius: 0 0 $i + $unit 0;
 	}
 }
 
-@each $name, $i in $sizes-map{
-	@if $name == default {
-		.rounded{
-			border-radius: $roundedDefault +  $unit;
+@each $name,
+$i in $sizes-map {
+	@if $name==default {
+		.rounded {
+			border-radius: $roundedDefault + $unit;
 		}
-		.rounded-l{
+
+		.rounded-l {
 			border-radius: $roundedDefault + $unit 0 0 $roundedDefault + $unit;
 		}
-		.rounded-r{
+
+		.rounded-r {
 			border-radius: 0 $roundedDefault + $unit $roundedDefault + $unit 0;
 		}
-		.rounded-t{
+
+		.rounded-t {
 			border-radius: $roundedDefault + $unit $roundedDefault + $unit 0 0;
 		}
-		.rounded-b{
+
+		.rounded-b {
 			border-radius: 0 0 $roundedDefault + $unit $roundedDefault + $unit;
 		}
-		.rounded-t-l{
+
+		.rounded-t-l {
 			border-radius: $roundedDefault + $unit 0 0 0;
 		}
-		.rounded-t-r{
+
+		.rounded-t-r {
 			border-radius: 0 $roundedDefault + $unit 0 0;
 		}
-		.rounded-b-l{
+
+		.rounded-b-l {
 			border-radius: 0 0 0 $roundedDefault + $unit;
 		}
-		.rounded-b-r{
+
+		.rounded-b-r {
 			border-radius: 0 0 $roundedDefault + $unit 0;
 		}
-	} @else {
-		.rounded-#{$name}{
+	}
+
+	@else {
+		.rounded-#{$name} {
 			border-radius: $i + $unit;
 		}
-		.rounded-l-#{$name}{
+
+		.rounded-l-#{$name} {
 			border-radius: $i + $unit 0 0 $i + $unit;
 		}
-		.rounded-r-#{$name}{
+
+		.rounded-r-#{$name} {
 			border-radius: 0 $i + $unit $i + $unit 0;
 		}
-		.rounded-t-#{$name}{
+
+		.rounded-t-#{$name} {
 			border-radius: $i + $unit $i + $unit 0 0;
 		}
-		.rounded-b-#{$name}{
+
+		.rounded-b-#{$name} {
 			border-radius: 0 0 $i + $unit $i + $unit;
 		}
-		.rounded-t-l-#{$name}{
+
+		.rounded-t-l-#{$name} {
 			border-radius: $i + $unit 0 0 0;
 		}
-		.rounded-t-r-#{$name}{
+
+		.rounded-t-r-#{$name} {
 			border-radius: 0 $i + $unit 0 0;
 		}
-		.rounded-b-l-#{$name}{
+
+		.rounded-b-l-#{$name} {
 			border-radius: 0 0 0 $i + $unit;
 		}
-		.rounded-b-r-#{$name}{
+
+		.rounded-b-r-#{$name} {
 			border-radius: 0 0 $i + $unit 0;
 		}
 	}
 }
 
 
-.rounded-full{
+.rounded-full {
 	border-radius: 100%;
 }

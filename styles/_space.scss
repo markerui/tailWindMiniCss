@@ -1,73 +1,97 @@
-@each $i in $sizes{
-	.space-#{$i}{
+@each $i in $sizes {
+	.space-#{$i} {
 		padding: $i + $unit;
 	}
-	.space-x-#{$i}{
+
+	.space-x-#{$i} {
 		padding-left: $i + $unit;
 		padding-right: $i + $unit;
 	}
-	.space-y-#{$i}{
+
+	.space-y-#{$i} {
 		padding-top: $i + $unit;
 		padding-bottom: $i + $unit;
 	}
-	.space-l-#{$i}{
+
+	.space-l-#{$i} {
 		padding-left: $i + $unit;
 	}
-	.space-r-#{$i}{
+
+	.space-r-#{$i} {
 		padding-right: $i + $unit;
 	}
-	.space-t-#{$i}{
+
+	.space-t-#{$i} {
 		padding-top: $i + $unit;
 	}
-	.space-b-#{$i}{
+
+	.space-b-#{$i} {
 		padding-bottom: $i + $unit;
 	}
 }
 
-@each $name, $i in $sizes-map{
-	@if $name == default {
-		.space{
+@each $name,
+$i in $sizes-map {
+	@if $name==default {
+		.space {
 			padding: $i + $unit;
 		}
-		.space-x{
+
+		.space-x {
 			padding-left: $i + $unit;
 			padding-right: $i + $unit;
 		}
-		.space-y{
+
+		.space-y {
 			padding-top: $i + $unit;
 			padding-bottom: $i + $unit;
 		}
-		.space-t{
+
+		.space-t {
 			padding-top: $i + $unit;
 		}
-		.space-b{
+
+		.space-b {
 			padding-bottom: $i + $unit;
 		}
-		.space-l{
+
+		.space-l {
 			padding-left: $i + $unit;
 		}
-		.space-r{
+
+		.space-r {
 			padding-right: $i + $unit;
 		}
-	} @else {
-		.space-x-#{$name}{
+	}
+
+	@else {
+		.space-#{$name} {
+			padding: $i + $unit;
+		}
+
+		.space-x-#{$name} {
 			padding-left: $i + $unit;
 			padding-right: $i + $unit;
 		}
-		.space-y-#{$name}{
+
+		.space-y-#{$name} {
 			padding-top: $i + $unit;
 			padding-bottom: $i + $unit;
 		}
-		.space-l-#{$name}{
+
+		.space-l-#{$name} {
 			padding-left: $i + $unit;
 		}
-		.space-r-#{$name}{
+
+		.space-r-#{$name} {
 			padding-right: $i + $unit;
 		}
-		.space-t-#{$name}{
+
+		.space-t-#{$name} {
 			padding-top: $i + $unit;
 		}
-		.space-b-#{$name}{
+
+		.space-b-#{$name} {
 			padding-bottom: $i + $unit;
 		}
 	}

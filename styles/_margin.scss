@@ -1,72 +1,95 @@
-@each $i in $sizes{
-	.m-#{$i}{
+@each $i in $sizes {
+	.m-#{$i} {
 		margin: $i + $unit;
 	}
-	.m-x-#{$i}{
+
+	.m-x-#{$i} {
 		margin-left: $i + $unit;
 		margin-right: $i + $unit;
 	}
-	.m-y-#{$i}{
+
+	.m-y-#{$i} {
 		margin-top: $i + $unit;
 		margin-bottom: $i + $unit;
 	}
-	.m-l-#{$i}{
+
+	.m-l-#{$i} {
 		margin-left: $i + $unit;
 	}
-	.m-r-#{$i}{
+
+	.m-r-#{$i} {
 		margin-right: $i + $unit;
 	}
-	.m-t-#{$i}{
+
+	.m-t-#{$i} {
 		margin-top: $i + $unit;
 	}
-	.m-b-#{$i}{
+
+	.m-b-#{$i} {
 		margin-bottom: $i + $unit;
 	}
 }
 
 
-@each $name, $i in $sizes-map{
-	@if $name == default {
-		.m-x{
-			margin-left: $i +  $unit;
-			margin-right: $i +  $unit;
+@each $name,
+$i in $sizes-map {
+	@if $name==default {
+		.m-x {
+			margin-left: $i + $unit;
+			margin-right: $i + $unit;
 		}
-		.m-y{
-			margin-top: $i +  $unit;
-			margin-bottom: $i +  $unit;
+
+		.m-y {
+			margin-top: $i + $unit;
+			margin-bottom: $i + $unit;
 		}
-		.m-t{
-			margin-top: $i +  $unit;
+
+		.m-t {
+			margin-top: $i + $unit;
 		}
-		.m-b{
-			margin-bottom: $i +  $unit;
+
+		.m-b {
+			margin-bottom: $i + $unit;
 		}
-		.m-l{
-			margin-left: $i +  $unit;
+
+		.m-l {
+			margin-left: $i + $unit;
 		}
-		.m-r{
-			margin-right: $i +  $unit;
+
+		.m-r {
+			margin-right: $i + $unit;
 		}
-	} @else {
-		.m-x-#{$name}{
-			margin-left: $i +  $unit;
-			margin-right: $i +  $unit;
+	}
+
+	@else {
+		.m-#{$name} {
+			margin: $i + $unit;
 		}
-		.m-y-#{$name}{
-			margin-top: $i +  $unit;
-			margin-bottom: $i +  $unit;
+
+		.m-x-#{$name} {
+			margin-left: $i + $unit;
+			margin-right: $i + $unit;
 		}
-		.m-l-#{$name}{
-			margin-left: $i +  $unit;
+
+		.m-y-#{$name} {
+			margin-top: $i + $unit;
+			margin-bottom: $i + $unit;
 		}
-		.m-r-#{$name}{
-			margin-right: $i +  $unit;
+
+		.m-l-#{$name} {
+			margin-left: $i + $unit;
 		}
-		.m-t-#{$name}{
-			margin-top: $i +  $unit;
+
+		.m-r-#{$name} {
+			margin-right: $i + $unit;
 		}
-		.m-b-#{$name}{
-			margin-bottom: $i +  $unit;
+
+		.m-t-#{$name} {
+			margin-top: $i + $unit;
+		}
+
+		.m-b-#{$name} {
+			margin-bottom: $i + $unit;
 		}
 	}
 }

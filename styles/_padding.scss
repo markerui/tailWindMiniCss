@@ -1,78 +1,93 @@
-@each $i in $sizes{
-	.p-#{$i}{
+@each $i in $sizes {
+	.p-#{$i} {
 		padding: $i + $unit;
 	}
-	.p-l-#{$i}{
-		@if $i == 0 {
-			padding-left: $i + $unit !important;
-		} @else{
-			padding-left: $i + $unit;
-		}
+
+	.p-x-#{$i} {
+		padding-left: $i + $unit;
+		padding-right: $i + $unit;
 	}
-	.p-r-#{$i}{
-		@if $i == 0 {
-			padding-right: $i + $unit !important;
-		} @else{
-			padding-right: $i + $unit;
-		}
+
+	.p-y-#{$i} {
+		padding-top: $i + $unit;
+		padding-bottom: $i + $unit;
 	}
-	.p-t-#{$i}{
-		@if $i == 0 {
-			padding-top: $i + $unit !important;
-		} @else{
-			padding-top: $i + $unit;
-		}
+
+	.p-l-#{$i} {
+		padding-left: $i + $unit;
 	}
-	.p-b-#{$i}{
-		@if $i == 0 {
-			padding-bottom: $i + $unit !important;
-		} @else{
-			padding-bottom: $i + $unit;
-		}
+
+	.p-r-#{$i} {
+		padding-right: $i + $unit;
+	}
+
+	.p-t-#{$i} {
+		padding-top: $i + $unit;
+	}
+
+	.p-b-#{$i} {
+		padding-bottom: $i + $unit;
 	}
 }
 
-@each $name, $i in $sizes-map{
-	@if $name == default {
-		.p-x{
+@each $name,
+$i in $sizes-map {
+	@if $name==default {
+		.p-x {
 			padding-left: $i + $unit;
 			padding-right: $i + $unit;
 		}
-		.p-y{
+
+		.p-y {
 			padding-top: $i + $unit;
 			padding-bottom: $i + $unit;
 		}
-		.p-t{
+
+		.p-t {
 			padding-top: $i + $unit;
 		}
-		.p-b{
+
+		.p-b {
 			padding-bottom: $i + $unit;
 		}
-		.p-l{
+
+		.p-l {
 			padding-left: $i + $unit;
 		}
-		.p-r{
+
+		.p-r {
 			padding-right: $i + $unit;
 		}
-	} @else {
-		.p-x-#{$name}{
+	}
+
+	@else {
+		.p-#{$name} {
+			padding: $i + $unit;
+		}
+
+		.p-x-#{$name} {
 			padding-left: $i + $unit;
 			padding-right: $i + $unit;
 		}
-		.p-y-#{$name}{
+
+		.p-y-#{$name} {
 			padding-top: $i + $unit;
 			padding-bottom: $i + $unit;
 		}
-		.p-l-#{$name}{
+
+		.p-l-#{$name} {
 			padding-left: $i + $unit;
 		}
-		.p-r-#{$name}{
+
+		.p-r-#{$name} {
 			padding-right: $i + $unit;
 		}
-		.p-t-#{$name}{
+
+		.p-t-#{$name} {
 			padding-top: $i + $unit;
 		}
-		.p-b-#{$name}{
+
+		.p-b-#{$name} {
 			padding-bottom: $i + $unit;
 		}
 	}
