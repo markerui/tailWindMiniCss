@@ -1,12 +1,16 @@
-# tailwindcss uniapp mini
+# Tailwindcss mini for UniApp (only)
 
-only tailwindcss for `uniapp`
+## Style import
 
-## only uniapp
+```css
+@import "path/index.scss";
+```
+
+## Vue import
 
 ```js
 
-import tailwind from './import.scss'
+import tailwind from 'path/import.scss'
 
 console.log(tailwind)
 
@@ -21,4 +25,8 @@ output {
 }
 ```
 
-readme more [tailwindcss](https://tailwindcss.com/)
+
+### Readme More 
+
+- [Tailwindcss](https://tailwindcss.com/)
+- [UniApp](https://uniapp.dcloud.io/)
