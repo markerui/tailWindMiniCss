@@ -1,60 +1,32 @@
 @mixin margin-variant($name, $value) {
-	@if $name==default {
-		.m-x {
-			margin-left: $value + $unit;
-			margin-right: $value + $unit;
-		}
-
-		.m-y {
-			margin-top: $value + $unit;
-			margin-bottom: $value + $unit;
-		}
-
-		.m-t {
-			margin-top: $value + $unit;
-		}
-
-		.m-b {
-			margin-bottom: $value + $unit;
-		}
-
-		.m-l {
-			margin-left: $value + $unit;
-		}
-
-		.m-r {
-			margin-right: $value + $unit;
-		}
-	}
-
-	@else {
+	@if $name!=default {
 		.m-#{$name} {
 			margin: $value + $unit;
 		}
 
-		.m-x-#{$name} {
+		.mx-#{$name} {
 			margin-left: $value + $unit;
 			margin-right: $value + $unit;
 		}
 
-		.m-y-#{$name} {
+		.my-#{$name} {
 			margin-top: $value + $unit;
 			margin-bottom: $value + $unit;
 		}
 
-		.m-l-#{$name} {
+		.ml-#{$name} {
 			margin-left: $value + $unit;
 		}
 
-		.m-r-#{$name} {
+		.mr-#{$name} {
 			margin-right: $value + $unit;
 		}
 
-		.m-t-#{$name} {
+		.mt-#{$name} {
 			margin-top: $value + $unit;
 		}
 
-		.m-b-#{$name} {
+		.mb-#{$name} {
 			margin-bottom: $value + $unit;
 		}
 	}

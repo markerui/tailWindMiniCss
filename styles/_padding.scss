@@ -1,60 +1,32 @@
 @mixin padding-variant($name, $value) {
-	@if $name==default {
-		.p-x {
-			padding-left: $value + $unit;
-			padding-right: $value + $unit;
-		}
-
-		.p-y {
-			padding-top: $value + $unit;
-			padding-bottom: $value + $unit;
-		}
-
-		.p-t {
-			padding-top: $value + $unit;
-		}
-
-		.p-b {
-			padding-bottom: $value + $unit;
-		}
-
-		.p-l {
-			padding-left: $value + $unit;
-		}
-
-		.p-r {
-			padding-right: $value + $unit;
-		}
-	}
-
-	@else {
+	@if $name!=default {
 		.p-#{$name} {
 			padding: $value + $unit;
 		}
 
-		.p-x-#{$name} {
+		.px-#{$name} {
 			padding-left: $value + $unit;
 			padding-right: $value + $unit;
 		}
 
-		.p-y-#{$name} {
+		.py-#{$name} {
 			padding-top: $value + $unit;
 			padding-bottom: $value + $unit;
 		}
 
-		.p-l-#{$name} {
+		.pl-#{$name} {
 			padding-left: $value + $unit;
 		}
 
-		.p-r-#{$name} {
+		.pr-#{$name} {
 			padding-right: $value + $unit;
 		}
 
-		.p-t-#{$name} {
+		.pt-#{$name} {
 			padding-top: $value + $unit;
 		}
 
-		.p-b-#{$name} {
+		.pb-#{$name} {
 			padding-bottom: $value + $unit;
 		}
 	}
